@@ -21,7 +21,7 @@ function load(builder){
 	function loop(){
 		return protos[cursor].then(function(_proto){
 			console.log("got", loads[cursor])
-			protobufjs.loadProto(_proto, builder, loads[cursor]+ ".proto")
+			protobufjs.loadProto(_proto, builder, "proto/"+ loads[cursor]+ ".proto")
 			++cursor
 			if(cursor < protos.length){
 				return loop()
